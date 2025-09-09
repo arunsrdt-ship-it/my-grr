@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.main-color-background {
+  background-color: #704ca4;
+}
+
+.main-color-text {
+  color: #704ca4;
+}
+
+.shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
