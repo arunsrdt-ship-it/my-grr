@@ -5,7 +5,7 @@ import LOPO from "../assets/learning/Lopo.png";
 
 const Learning = () => {
   return (
-    <div className="learning p-5">
+    <div className="learning px-10 py-6">
       <div className="learning-items">
         <div className="learning-heading font-bold text-2xl mb-5">
           <h3>Learning Summary</h3>

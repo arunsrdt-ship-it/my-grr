@@ -13,7 +13,7 @@ const Explore = () => {
     navigate("/enroll")
   }
   return (
-    <div className="enrolled p-5">
+    <div className="enrolled px-10 py-6">
       <div className="enrolled-items">
         <div className="heading flex items-center justify-between">
           <div className="flex items-center text-xl  gap-1">

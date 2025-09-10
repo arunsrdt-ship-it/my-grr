@@ -15,7 +15,7 @@ const Home = ({ user }) => {
     <div className="home-container">
       <div className="mt-10 sm:mt-16 p-3 sm:p-5">
         <div className="wrapper grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
-          <div className="col-span-1 md:col-span-3 space-y-5">
+          <div className="mt-6 col-span-1 md:col-span-3 space-y-5">
             <UserDetails user={user} />
             <ArtificalSection />
             <EnrolledCourses />

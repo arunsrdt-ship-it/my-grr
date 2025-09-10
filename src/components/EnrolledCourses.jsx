@@ -12,7 +12,7 @@ const EnrolledCourses = () => {
   }
 
   return (
-    <div className="enrolled-courses p-5">
+    <div className="enrolled-courses px-10 py-6">
       <div className="enrolled-courses-items">
         <div className="heading flex justify-between items-center">
           <h3 className="font-bold text-2xl">Enrolled Courses</h3>
