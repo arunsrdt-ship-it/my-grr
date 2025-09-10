@@ -1,6 +1,7 @@
 import { BrowserRouter, useRoutes } from "react-router-dom";
 import { useState } from "react";
 import routes from "./components/routes/routes";
+import { VideoProvider } from './context/VideoContext';
 
 function AppRoutes({ isAuthenticated, currentUser, login }) {
   return useRoutes(routes(isAuthenticated, currentUser, login));
@@ -12,13 +13,15 @@ function App() {
   const isAuthenticated = !!currentUser;
 
   return (
-    <BrowserRouter>
-      <AppRoutes
-        isAuthenticated={isAuthenticated}
-        currentUser={currentUser}
-        login={login}
-      />
-    </BrowserRouter>
+    <VideoProvider>
+      <BrowserRouter>
+        <AppRoutes
+          isAuthenticated={isAuthenticated}
+          currentUser={currentUser}
+          login={login}
+        />
+      </BrowserRouter>
+    </VideoProvider>
   );
 }
 

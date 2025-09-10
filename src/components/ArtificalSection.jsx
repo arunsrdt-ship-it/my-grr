@@ -10,9 +10,9 @@ import TREE from "../assets/artificial/Group1238.png";
 
 const ArtificalSection = () => {
   return (
-    <div className="section border-2 border-gray-200 relative rounded-xl mt-9 p-4">
+    <div className="section border-2 border-gray-200 ml-10 relative rounded-xl mt-9 p-4">
       <div className="section-heading-items flex items-center justify-between">
-        <h3 className="font-bold text-xl mb-7">Artificial Intelligence</h3>
+        <h3 className="font-bold text-2xl mb-7">Artificial Intelligence</h3>
 
         <div className="some-images flex items-center">
           <img src={MASKGROUP1} />

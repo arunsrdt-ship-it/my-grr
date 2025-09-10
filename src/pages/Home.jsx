@@ -12,22 +12,22 @@ import Explore from "../components/Explore";
 
 const Home = ({ user }) => {
   return (
-    <div>
-      <div className="mt-25 p-5">
-        <div className="wrapper grid grid-cols-4 gap-4 p-5">
-          <div className="col-span-3 space-y-5">
+    <div className="home-container">
+      <div className="mt-10 sm:mt-16 p-3 sm:p-5">
+        <div className="wrapper grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
+          <div className="col-span-1 md:col-span-3 space-y-5">
             <UserDetails user={user} />
             <ArtificalSection />
-            <EnrolledCourses/>
-            <Learning/>
-            <Explore/>
+            <EnrolledCourses />
+            <Learning />
+            <Explore />
           </div>
 
-          <div className="col-span-1 space-y-5">
+          <div className="col-span-1 space-y-5 sm:p-5 md:p-5 ">
             <Dues />
             <Calendar />
             <Today />
-            <LeaderBoard/>
+            <LeaderBoard />
           </div>
         </div>
       </div>
@@ -36,3 +36,5 @@ const Home = ({ user }) => {
 };
 
 export default Home;
+
+

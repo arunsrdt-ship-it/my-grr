@@ -1,9 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import { IoIosArrowDropleft } from "react-icons/io";
-import { IoIosArrowDropright } from "react-icons/io";
+
 import { useState } from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const PrivateRoute = ({ isAuthenticated }) => {
   if (!isAuthenticated) {
@@ -20,8 +21,23 @@ const PrivateRoute = ({ isAuthenticated }) => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <button onClick={handleClick} className={`absolute z-21 cursor-pointer top-[22%] ${expanded ? "left-[11.1%]" : "left-[3.6%]"}`}>
-        {expanded ? <IoIosArrowDropright color="gray" size={25} /> : <IoIosArrowDropleft color="gray" size={25} />}
+     <button
+        onClick={handleClick}
+        className={`absolute z-50 transition-all duration-50  cursor-pointer top-[205px] ${
+          expanded ? "left-[212px]" : "left-[71px]"}`}>
+        {expanded ? (
+          <MdKeyboardArrowLeft
+            color="gray"
+            className="bg-white rounded-full border border-gray-300 shadow-xl z-13"
+            size={25}
+          />
+        ) : (
+          <MdKeyboardArrowRight
+            className="bg-white border border-gray-300 rounded-full shadow-xl z-13 "
+            color="gray"
+            size={25}
+          />
+        )}
       </button>
 
       <div className="flex flex-1 gap-10 overflow-hidden">

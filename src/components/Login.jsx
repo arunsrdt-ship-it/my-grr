@@ -33,46 +33,70 @@ const Login = ({ login }) => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden"> 
       <div className="loginpage-items flex items-center justify-center h-screen gap-[5vw] p-5">
-        <div className="image-section relative flex w-[40vw]">
-          <img className="absolute mx-[5vw]" src={GROU10} />
-          <img className="mx-[3vw] w-[37vw]" src={COMP} />
-          <img className="absolute  mx-[37vw] my-[30vh]" src={GROU1} />
-          <img className="absolute mx-[10vw] my-[73vh]" src={GROU2} />
-          <img className="absolute mx-[21vw] my-[23vh]" src={GROU3} />
-          <img className="absolute mx-[25vw] my-[40vh] z-20" src={GROU5} />
-          <img className="absolute my-[62vh] z-20 mx-[18vw]" src={GROU6} />
-          <img className="absolute mx-[43vw] " src={GROU7} />
-          <img className="absolute my-[19vh] z-10" src={GROU8} />
-          <img className="absolute my-[35vh] mx-[5vw] z-10" src={GROU11} />
-          <img className="absolute my-[70vh] mx-[35vw] z-10" src={GROU12} />
+        
+        <div className="image-section relative flex w-[40vw] h-[100vh]">
+          <img className="absolute left-[5vw] z-20 top-[5vh]" src={GROU10} />
+          <img className="absolute left-[3vw] top-[10vh] w-[37vw]" src={COMP} />
+          <img className="absolute left-[37vw] top-[30vh]" src={GROU1} />
+          <img className="absolute left-[10vw] top-[73vh]" src={GROU2} />
+          <img className="absolute left-[21vw] top-[23vh]" src={GROU3} />
+          <img className="absolute left-[25vw] top-[40vh] z-20" src={GROU5} />
+          <img className="absolute left-[18vw] top-[62vh] z-20" src={GROU6} />
+          <img className="absolute left-[43vw] top-[5vh]" src={GROU7} />
+          <img className="absolute left-[0vw] top-[19vh] z-10" src={GROU8} />
+          <img className="absolute left-[5vw] top-[35vh] z-10" src={GROU11} />
+          <img className="absolute left-[35vw] top-[70vh] z-10" src={GROU12} />
         </div>
-        <div className="form-section flex flex-col  justify-center items-center  bg-violet-50 w-[30vw] h-full">
+
+        
+        <div className="form-section flex flex-col justify-center items-center bg-violet-50 w-[30vw] h-full">
           <img className="w-[20vw]" src={GROU9} />
 
           <form className="p-5" onSubmit={handleLogin}>
             <div className="text-left mt-10">
-              <h2 className="text-3xl font-semibold">&nbsp;&nbsp;&nbsp;Login to your Account</h2>
-              <p className="font-light mt-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See what is going on </p>
+              <h2 className="text-3xl font-semibold">
+                &nbsp;&nbsp;&nbsp;Login to your Account
+              </h2>
+              <p className="font-light mt-1">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See what is going on{" "}
+              </p>
             </div>
-            <div className="mt-10 my-5 text-md  ">
-              <lable className="block font-semibold">Students ID:</lable>
-              <input type="text" className="w-full border-1 p-2 rounded-md border-gray-300" placeholder="mail@abc.com" value={userId} onChange={(e) => setUserId(e.target.value)} />
+            <div className="mt-10 my-5 text-md">
+              <label className="block font-semibold">Students ID:</label>
+              <input
+                type="text"
+                className="w-full border p-2 rounded-md border-gray-300"
+                placeholder="mail@abc.com"
+                value={userId}
+                onChange={(e) => setUserId(e.target.value)}
+              />
             </div>
             <div>
               <label className="block font-semibold">Password:</label>
-              <input type="password" className="w-full border-1 p-2 rounded-md border-gray-300" placeholder="Password" value={pass} onChange={(e) => setPass(e.target.value)} />
+              <input
+                type="password"
+                className="w-full border p-2 rounded-md border-gray-300"
+                placeholder="Password"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+              />
             </div>
-            <div className="check-box flex mt-1 gap-29 text-sm ">
+            <div className="check-box flex mt-1 gap-5 text-sm">
               <label>
                 <input className="accent-[#704ca4]" type="checkbox" />
                 &nbsp;Remember Me
               </label>
-              <div className="cursor-pointer main-color-text">Fogot Password?</div>
+              <div className="cursor-pointer main-color-text">
+                Forgot Password?
+              </div>
             </div>
             <div>
-              <button type="submit" className="w-full main-color-background text-white font-semibold cursor-pointer p-2 border-none mt-7 rounded-md">
+              <button
+                type="submit"
+                className="w-full main-color-background text-white font-semibold cursor-pointer p-2 border-none mt-7 rounded-md"
+              >
                 Login
               </button>
             </div>

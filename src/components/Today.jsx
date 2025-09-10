@@ -12,10 +12,10 @@ const Today = () => {
           <h4 className="font-semibold text-xl">UI/UX Design Principles</h4>
           <p className="font-light text-xs">01:30 PM - 03:30 PM</p>
         </div>
-        <div className="item2 bg-[#fefaec] mt-2  p-3 border-l-4 border-[#FFBA00]">
+        <div className="item2 bg-[#fefaec]   mt-2  p-4 border-l-4 border-[#FFBA00]">
           <div className="flex justify-between">
             <h4 className="font-semibold text-xl">UI/UX Design Principles</h4>
-            <span className="bg-[#4CAF50] text-white p-1 rounded-full">Room No. - 123</span>
+           <div> <span className="bg-[#4CAF50] text-white rounded-full">Room No. - 123</span></div>
           </div>
           <p className="font-light text-xs">01:30 PM - 03:30 PM</p>
         </div>

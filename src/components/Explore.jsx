@@ -1,22 +1,33 @@
 import React from "react";
 import RATING from "../assets/academic/ratings.png";
 import ENROLLED from "../assets/academic/Enrolled.png";
+import { useNavigate } from "react-router-dom";
 
 const Explore = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/explore");
+  };
+
+  const handleCard = () => {
+    navigate("/enroll")
+  }
   return (
     <div className="enrolled p-5">
       <div className="enrolled-items">
         <div className="heading flex items-center justify-between">
           <div className="flex items-center text-xl  gap-1">
             <h3 className="font-bold text-2xl ">Explore Courses</h3>
-            <p className="mt-1.5 text-gray-500">(Skill-based Placement Programs)</p>
+            <p className="mt-1.5 text-gray-500 ">(Skill-based Placement Programs)</p>
           </div>
           <div>
-            <span className="main-color-text">See All</span>
+            <span onClick={handleClick} className="main-color-text cursor-pointer">
+              See All
+            </span>
           </div>
         </div>
-        <div className="enrolled-cards mt-10 flex justify-between  flex-wrap gap-5">
-          <div className="card p-2 border-1 border-gray-200 rounded-xl w-70 ">
+        <div className="enrolled-cards mt-10 flex    flex-wrap gap-5">
+          <div onClick={handleCard} className="card cursor-pointer  p-2  border-1 border-gray-200 rounded-xl w-70 ">
             <div className="image">
               <img src={ENROLLED} />
             </div>
@@ -38,7 +49,7 @@ const Explore = () => {
           <div className="card p-2 border-1 border-gray-200 rounded-xl w-70 ">
             <div className="image">
               <img src={ENROLLED} />
-            </div> 
+            </div>
             <div className="heading font-semibold mt-3">
               <h4>Beginner’s Guide to Design</h4>
             </div>

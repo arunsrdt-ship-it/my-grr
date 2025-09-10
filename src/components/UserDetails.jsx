@@ -3,7 +3,7 @@ import FRAMEPNG from "../assets/main/Frame.png";
 
 const UserDetails = ({user}) => {
   return (
-    <div className="user-details bg-violet-100 rounded-3xl py-6 px-10 ">
+    <div className="user-details bg-[#EFE9FF99] ml-10 rounded-3xl py-6 px-10 ">
       <div className="user-items flex items-center justify-between">
         <div>
           <div className="greeting font-bold text-4xl">

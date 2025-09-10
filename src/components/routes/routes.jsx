@@ -4,7 +4,7 @@ import Home from "../../pages/Home";
 import Pro from "../Pro";
 import Set from "../Set";
 import Assessments from "../Assessments";
-import Courses from "../Courses";
+import Courses from "../../components/courses/Courses";
 import Attendance from "../Attendance";
 import Bookmark from "../Bookmark";
 import Schedule from "../Schedule";
@@ -14,6 +14,7 @@ import Assignments from "../Assignments";
 import EnrolledCourses from "../EnrolledCourses";
 import SideEnroll from "../SideEnroll";
 import SideExplore from "../SideExplore";
+import ForEnroll from "../ForEnroll";
 
 const routes = (isAuthenticated, currentUser, login) => [
   {
@@ -55,7 +56,11 @@ const routes = (isAuthenticated, currentUser, login) => [
       },
       {
         path: "/enrolled-courses",
-        element:<SideEnroll/>
+        element: <SideEnroll />,
+      },
+      {
+        path: "/enroll",
+        element: <ForEnroll />,
       },
     ],
   },
