@@ -1,5 +1,5 @@
 import React from "react";
-import FRAMEPNG from "../assets/main/Frame.png";
+import FRAMEPNG from "../../assets/main/Frame.png";
 
 const UserDetails = ({user}) => {
   return (

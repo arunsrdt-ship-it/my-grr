@@ -1,7 +1,7 @@
 import React from "react";
-import BELLLPNG from "../assets/header/Bell.png";
-import LOGOPNG from "../assets/header/Logo.png";
-import USERPNG from "../assets/header/User.png";
+import BELLLPNG from "../../assets/header/Bell.png";
+import LOGOPNG from "../../assets/header/Logo.png";
+import USERPNG from "../../assets/header/User.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {

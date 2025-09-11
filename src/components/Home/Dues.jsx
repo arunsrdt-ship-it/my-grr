@@ -1,6 +1,6 @@
 import React from "react";
-import VECTORPNG from "../assets/main/Vector.png";
-import ICONPNG from "../assets/main/icon.png";
+import VECTORPNG from "../../assets/main/Vector.png";
+import ICONPNG from "../../assets/main/icon.png";
 
 const Dues = () => {
   return (

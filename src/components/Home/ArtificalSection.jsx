@@ -1,12 +1,12 @@
 import React from "react";
-import MASKGROUP1 from "../assets/artificial/Mask.png";
-import MASKGROUP2 from "../assets/artificial/Mask(1).png";
-import MASKGROUP3 from "../assets/artificial/Mask(2).png";
-import CLOCK from "../assets/artificial/ClockFill.png";
-import PERSON from "../assets/artificial/PersonFill.png";
-import VIDEO from "../assets/artificial/Icon(1).png";
-import CALENDAR from "../assets/artificial/Group224.png";
-import TREE from "../assets/artificial/Group1238.png";
+import MASKGROUP1 from "../../assets/artificial/Mask.png";
+import MASKGROUP2 from "../../assets/artificial/Mask(1).png";
+import MASKGROUP3 from "../../assets/artificial/Mask(2).png";
+import CLOCK from "../../assets/artificial/ClockFill.png";
+import PERSON from "../../assets/artificial/PersonFill.png";
+import VIDEO from "../../assets/artificial/Icon(1).png";
+import CALENDAR from "../../assets/artificial/Group224.png";
+import TREE from "../../assets/artificial/Group1238.png";
 
 const ArtificalSection = () => {
   return (

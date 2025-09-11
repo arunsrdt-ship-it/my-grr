@@ -1,8 +1,8 @@
 import React from "react";
-import ProgressBar from "./ProgressBar";
-import ASSESS from "../assets/academic/Assesment.png";
-import GRADE from "../assets/academic/Grade.png";
-import IOP from "../assets/academic/iop.png";
+import ProgressBar from "../ProgressBar";
+import ASSESS from "../../assets/academic/Assesment.png";
+import GRADE from "../../assets/academic/Grade.png";
+import IOP from "../../assets/academic/iop.png";
 import { useNavigate } from "react-router-dom";
 
 const AcademicCourses = () => {

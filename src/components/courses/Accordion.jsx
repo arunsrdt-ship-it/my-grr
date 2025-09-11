@@ -44,7 +44,7 @@ const Accordion = ({ module }) => {
                   return (
                     <div
                       className={`flex justify-center font-semibold w-[100%] items-center gap-4 my-2 p-4  ${
-                        isActiveTopic ? "bg-[#9471F233] text-[#6750A4]" : ""
+                        isActiveTopic ? "bg-[#9471F233] main-color-text" : ""
                       }`}
                       onClick={() => {
                         setActiveTitle(courseContent.title);
@@ -53,7 +53,7 @@ const Accordion = ({ module }) => {
                     >
                       <div
                         className={`w-5 h-5 border-1 border-gray-300  ${
-                          courseContent.completed ? "bg-[#6750A4]" : "bg-white"
+                          courseContent.completed ? "main-color-background" : "bg-white"
                         }  rounded-full flex items-center justify-center cursor-pointer`}
                       >
                         {courseContent.completed ? (
@@ -67,7 +67,7 @@ const Accordion = ({ module }) => {
                         {courseContent.title}
                       </span>
 
-                      <div className="ml-auto  flex gap-2 text-purple-500 text-sm">
+                      <div className="ml-auto  flex gap-2 main-color-text text-sm">
                         {courseContent.book && (
                           <span className="relative group">
                             <img src={book} />

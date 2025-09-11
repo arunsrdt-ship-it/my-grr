@@ -1,6 +1,6 @@
 import React from "react";
-import PEOPLE from "../assets/leaderBoard/People.png";
-import ONEP from "../assets/leaderBoard/Oneper.png";
+import PEOPLE from "../../assets/leaderBoard/People.png";
+import ONEP from "../../assets/leaderBoard/Oneper.png";
 
 const LeaderBoard = () => {
   return (

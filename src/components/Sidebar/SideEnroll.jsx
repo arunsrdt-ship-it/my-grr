@@ -1,5 +1,5 @@
 import React from 'react'
-import EnrolledCourses from './EnrolledCourses'
+import EnrolledCourses from '../Home/EnrolledCourses'
 
 const SideEnroll = () => {
   return (

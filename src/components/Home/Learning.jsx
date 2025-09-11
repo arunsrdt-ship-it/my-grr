@@ -1,7 +1,7 @@
 import React from "react";
-import BAG from "../assets/learning/Bag.png";
-import CHAMP from "../assets/learning/Champ.png";
-import LOPO from "../assets/learning/Lopo.png";
+import BAG from "../../assets/learning/Bag.png";
+import CHAMP from "../../assets/learning/Champ.png";
+import LOPO from "../../assets/learning/Lopo.png";
 
 const Learning = () => {
   return (

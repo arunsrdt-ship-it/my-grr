@@ -1,6 +1,6 @@
 import React from "react";
-import RATING from "../assets/academic/ratings.png";
-import ENROLLED from "../assets/academic/Enrolled.png";
+import RATING from "../../assets/academic/ratings.png";
+import ENROLLED from "../../assets/academic/Enrolled.png";
 import { useNavigate } from "react-router-dom";
 
 const Explore = () => {

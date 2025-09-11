@@ -44,7 +44,7 @@ const Lecture = () => {
               <h3 className="text-xl font-bold text-gray-800 mb-3">
                 Understanding User-Centered Design
               </h3>
-              <h4 className="text-[#6750A4] text-xl font-bold mb-2">
+              <h4 className="main-color-text text-xl font-bold mb-2">
                 Topic Description
               </h4>
               <p className="text-md text-gray-700">

@@ -1,5 +1,5 @@
 import React from 'react'
-import Explore from './Explore'
+import Explore from '../Home/Explore'
 
 const SideExplore = () => {
   return (

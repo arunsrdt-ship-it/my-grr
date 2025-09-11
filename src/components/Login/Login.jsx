@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import COMP from "../assets/login/Component3.png";
-import GROU1 from "../assets/login/Group (2).png";
-import GROU2 from "../assets/login/Group (1).png";
-import GROU3 from "../assets/login/Group (3).png";
-import GROU5 from "../assets/login/Group 1707486277.png";
-import GROU6 from "../assets/login/Group 1707486279.png";
-import GROU7 from "../assets/login/Group.png";
-import GROU8 from "../assets/login/image 2942.png";
-import GROU9 from "../assets/login/Logo (1).png";
-import GROU10 from "../assets/login/Section Text.png";
-import GROU11 from "../assets/login/Group (4).png";
-import GROU12 from "../assets/login/Group (5).png";
-import users from "../data/user";
+import COMP from "../../assets/login/Component3.png";
+import GROU1 from "../../assets/login/Group (2).png";
+import GROU2 from "../../assets/login/Group (1).png";
+import GROU3 from "../../assets/login/Group (3).png";
+import GROU5 from "../../assets/login/Group 1707486277.png";
+import GROU6 from "../../assets/login/Group 1707486279.png";
+import GROU7 from "../../assets/login/Group.png";
+import GROU8 from "../../assets/login/image 2942.png";
+import GROU9 from "../../assets/login/Logo (1).png";
+import GROU10 from "../../assets/login/Section Text.png";
+import GROU11 from "../../assets/login/Group (4).png";
+import GROU12 from "../../assets/login/Group (5).png";
+import users from "../../data/user";
+import "../../components/styles/Login.css"
 
 const Login = ({ login }) => {
   const [userId, setUserId] = useState("");
@@ -33,12 +34,13 @@ const Login = ({ login }) => {
   };
 
   return (
+    
     <div className="overflow-hidden"> 
       <div className="loginpage-items flex items-center justify-center h-screen gap-[5vw] p-5">
         
         <div className="image-section relative flex w-[40vw] h-[100vh]">
           <img className="absolute left-[5vw] z-20 top-[5vh]" src={GROU10} />
-          <img className="absolute left-[3vw] top-[10vh] w-[37vw]" src={COMP} />
+          <img className="absolute left-[3vw] top-[10vh] w-[37vw]" style={{ animation: "spin 10s linear infinite" }} src={COMP} />
           <img className="absolute left-[37vw] top-[30vh]" src={GROU1} />
           <img className="absolute left-[10vw] top-[73vh]" src={GROU2} />
           <img className="absolute left-[21vw] top-[23vh]" src={GROU3} />
@@ -68,7 +70,7 @@ const Login = ({ login }) => {
               <input
                 type="text"
                 className="w-full border p-2 rounded-md border-gray-300"
-                placeholder="mail@abc.com"
+                placeholder="323432534545"
                 value={userId}
                 onChange={(e) => setUserId(e.target.value)}
               />

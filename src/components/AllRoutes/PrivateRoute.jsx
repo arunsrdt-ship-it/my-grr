@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Header from "../Home/Header";
+import Sidebar from "../Sidebar/Sidebar";
 
 import { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";

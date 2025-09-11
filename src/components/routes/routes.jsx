@@ -1,20 +1,19 @@
-import ProtectedRoute from "../PrivateRoute";
-import Login from "../../components/Login";
+import ProtectedRoute from "../../components/AllRoutes/PrivateRoute";
+import Login from "../../components/Login/Login";
 import Home from "../../pages/Home";
-import Pro from "../Pro";
-import Set from "../Set";
-import Assessments from "../Assessments";
+
+import Assessments from "../Sidebar/Assessments";
 import Courses from "../../components/courses/Courses";
-import Attendance from "../Attendance";
-import Bookmark from "../Bookmark";
-import Schedule from "../Schedule";
-import Payment from "../Payment";
-import Explore from "../Explore";
-import Assignments from "../Assignments";
-import EnrolledCourses from "../EnrolledCourses";
-import SideEnroll from "../SideEnroll";
-import SideExplore from "../SideExplore";
-import ForEnroll from "../ForEnroll";
+import Attendance from "../Sidebar/Attendance";
+import Bookmark from "../Sidebar/Bookmark";
+import Schedule from "../Sidebar/Schedule";
+import Payment from "../Sidebar/Payment";
+import Explore from "../Home/Explore";
+import Assignments from "../Sidebar/Assignments";
+import EnrolledCourses from "../Home/EnrolledCourses";
+import SideEnroll from "../Sidebar/SideEnroll";
+import SideExplore from "../Sidebar/SideExplore";
+import ForEnroll from "../Enrollment/ForEnroll";
 
 const routes = (isAuthenticated, currentUser, login) => [
   {

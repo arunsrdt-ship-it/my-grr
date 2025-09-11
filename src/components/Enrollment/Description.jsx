@@ -1,8 +1,8 @@
 import React from "react";
-import ICON from "../assets/decription/icon.png";
-import AWARD from "../assets/decription/award.png";
-import GRAD from "../assets/decription/grad.png";
-import PLAY from "../assets/decription/play.png";
+import ICON from "../../assets/decription/icon.png";
+import AWARD from "../../assets/decription/award.png";
+import GRAD from "../../assets/decription/grad.png";
+import PLAY from "../../assets/decription/play.png";
 const Description = () => {
   return (
     <div className="description w-[70vw] ">
@@ -59,6 +59,9 @@ const Description = () => {
               interfaces for renowned tech companies, ensuring seamless and engaging user experiences.
             </p>
           </div>
+         <div className="mt-9">
+           <hr  className="border-t-2  border-gray-300" />
+         </div>
         </div>
       </div>
     </div>

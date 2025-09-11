@@ -12,11 +12,11 @@ const Courses = () => {
     <div className="bg-white text-gray-800 p-6  text-md mt-24 ml-7">
       {/* Breadcrumb */}
       <nav className="text-md text-gray-600 mb-4 space-x-2 ml-1">
-        <Link to="/home" className="text-purple-600 hover:underline">
+        <Link to="/home" className="main-color-text hover:underline">
           Home
         </Link>
         <span>&gt;</span>
-        <Link to="/courses" className="text-purple-600 hover:underline">
+        <Link to="/courses" className="main-color-text hover:underline">
           Enrolled Courses
         </Link>
         <span>&gt;</span>
@@ -40,8 +40,8 @@ const Courses = () => {
                 className={`py-2 px-4 border-b-2 font-medium text-md
                 ${
                   activeTab === tab
-                    ? "text-purple-600 border-purple-600"
-                    : "text-gray-600 border-transparent hover:text-purple-600 hover:border-purple-600"
+                    ? "main-color-text main-color-text"
+                    : "text-gray-600 border-transparent hover:main-color-text hover:main-color-text"
                 }`}
               >
                 {tab === "overview" ? "Overview" : "Lecture"}
@@ -84,7 +84,7 @@ const Courses = () => {
 
             <h3 className="font-semibold text-lg mb-2">Instructor</h3> 
               <div className="mb-3">
-                <p className="font-bold text-lg text-purple-700">Ronald Richards</p>
+                <p className="font-bold text-lg main-color-text">Ronald Richards</p>
                 <p className="text-md">UI/UX Designer</p>
               </div>
             <div className="flex items-center gap-y-2 space-x-4">
