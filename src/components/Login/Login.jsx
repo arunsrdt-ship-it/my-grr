@@ -13,34 +13,52 @@ import GROU10 from "../../assets/login/Section Text.png";
 import GROU11 from "../../assets/login/Group (4).png";
 import GROU12 from "../../assets/login/Group (5).png";
 import users from "../../data/user";
-import "../../components/styles/Login.css"
+import "../../components/styles/Login.css";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../features/auth/authThunk";
 
-const Login = ({ login }) => {
-  const [userId, setUserId] = useState("");
-  const [pass, setPass] = useState("");
+const Login = () => {
+  const { user, error, loading } = useSelector((state) => state.auth);
+
+  const [userDetailsId, setUserDetailById] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLogin = (e) => {
     e.preventDefault();
+    // dispatch(loginUser({ userDetailsId, password }))
+    //   .unwrap()
+    //   .then(() => navigate("/home"))
+    //   .catch((err) => {
+    //     console.error("Login error:", err);
+    //     alert(err?.message || err || "Invalid credentials");
+    //   });
 
-    const user = users.find((u) => u.email === userId && u.password === pass);
+    dispatch(loginUser({ userDetailsId, password }))
+  .unwrap()
+  .then(() => {
+    console.log("Login successful, navigating...");
+    navigate("/home");   // ✅ should now fire
+  })
+  .catch((err) => {
+    console.error("Login error:", err);
+    alert(typeof err === "string" ? err : err?.message || "Invalid credentials");
+  });
 
-    if (user) {
-      login(user);
-      navigate("/home");
-    } else {
-      alert("Invalid credentials!");
-    }
   };
 
   return (
-    
-    <div className="overflow-hidden"> 
+    <div className="overflow-hidden">
       <div className="loginpage-items flex items-center justify-center h-screen gap-[5vw] p-5">
-        
         <div className="image-section relative flex w-[40vw] h-[100vh]">
           <img className="absolute left-[5vw] z-20 top-[5vh]" src={GROU10} />
-          <img className="absolute left-[3vw] top-[10vh] w-[37vw]" style={{ animation: "spin 10s linear infinite" }} src={COMP} />
+          <img
+            className="absolute left-[3vw] top-[10vh] w-[37vw]"
+            style={{ animation: "spin 10s linear infinite" }}
+            src={COMP}
+          />
           <img className="absolute left-[37vw] top-[30vh]" src={GROU1} />
           <img className="absolute left-[10vw] top-[73vh]" src={GROU2} />
           <img className="absolute left-[21vw] top-[23vh]" src={GROU3} />
@@ -52,7 +70,6 @@ const Login = ({ login }) => {
           <img className="absolute left-[35vw] top-[70vh] z-10" src={GROU12} />
         </div>
 
-        
         <div className="form-section flex flex-col justify-center items-center bg-violet-50 w-[30vw] h-full">
           <img className="w-[20vw]" src={GROU9} />
 
@@ -71,8 +88,8 @@ const Login = ({ login }) => {
                 type="text"
                 className="w-full border p-2 rounded-md border-gray-300"
                 placeholder="323432534545"
-                value={userId}
-                onChange={(e) => setUserId(e.target.value)}
+                value={userDetailsId}
+                onChange={(e) => setUserDetailById(e.target.value)}
               />
             </div>
             <div>
@@ -81,8 +98,8 @@ const Login = ({ login }) => {
                 type="password"
                 className="w-full border p-2 rounded-md border-gray-300"
                 placeholder="Password"
-                value={pass}
-                onChange={(e) => setPass(e.target.value)}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="check-box flex mt-1 gap-5 text-sm">
@@ -99,7 +116,7 @@ const Login = ({ login }) => {
                 type="submit"
                 className="w-full main-color-background text-white font-semibold cursor-pointer p-2 border-none mt-7 rounded-md"
               >
-                Login
+                {loading ? "Logging in..." : "Login"}
               </button>
             </div>
           </form>

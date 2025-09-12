@@ -5,9 +5,11 @@ import Sidebar from "../Sidebar/Sidebar";
 import { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { useSelector } from "react-redux";
 
-const PrivateRoute = ({ isAuthenticated }) => {
-  if (!isAuthenticated) {
+const PrivateRoute = () => {
+    const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+if (!isAuthenticated) {
     return <Navigate to="/" replace />;
   }
 

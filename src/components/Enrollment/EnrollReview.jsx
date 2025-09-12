@@ -37,7 +37,7 @@ export default function EnrollReview() {
     <div className="w-full px-10">
       <h2 className="text-xl font-semibold mb-6">Learner Reviews</h2>
 
-      {/* Flex container: left summary + right reviews */}
+
       <div className="flex flex-col md:flex-row gap-10">
         {/* Left: Ratings summary */}
         <div className="w-full md:w-1/3 space-y-4">

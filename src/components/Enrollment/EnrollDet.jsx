@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Description from "./Description";
+import { useSelector } from "react-redux";
 
-const EnrollDet = () => {
+const EnrollDet = ({course}) => {
   const [toggle, setToggle] = useState("description");
+    const { detail, loading, error } = useSelector((state) => state.detail);
+
 
   return (
     <div className="enroll-details justify-between">
@@ -39,7 +42,7 @@ const EnrollDet = () => {
         <div className="mt-10">
           {toggle === "description" && (
             <div>
-              <Description />
+              <Description course={detail || course} />
             </div>
           )}
           {toggle === "instructor" && (
