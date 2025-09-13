@@ -1,18 +1,20 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { loginApi } from "../../api/authApi";
+import { loginApi } from "../../api/auth.js";
 
 export const loginUser = createAsyncThunk(
     "auth/loginUser",
-    async({userId, pass}, {rejectWithValue}) => {
+    async({userDetailsId, password}, {rejectWithValue}) => {
         try {
-            const data = await loginApi(userId, pass)
-        if(!data.success){
+            const data = await loginApi(userDetailsId, password)
+        if (!data?.userDetailsId) {
             return rejectWithValue("Invalid Credentials")
         }
-        return data.user;
-    
+        return data;
         } catch (error) {
-            return rejectWithValue(error.response?.data?.message || "server error")
+            return rejectWithValue(error.response?.data?.message || "Server error")
         }
     }
 )
+
+
+

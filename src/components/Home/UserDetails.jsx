@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import FRAMEPNG from "../../assets/main/Frame.png";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+<<<<<<< HEAD
 import { UserMila } from "../../features/user/userThunk";
 
 const UserDetails = ({userId}) => {
@@ -15,17 +16,33 @@ const UserDetails = ({userId}) => {
       dispath(UserMila(userId))
     }
   })
+=======
+
+const UserDetails = () => {
+    const { user } = useSelector((state) => state.auth);
+
+>>>>>>> 776a081ae41fec81e92f756224cd5e2d1eb5d5be
 
   return (
+
+    
     <div className="user-details bg-[#EFE9FF99] ml-10 rounded-3xl py-6 px-10 ">
       <div className="user-items flex items-center justify-between">
         <div>
           <div className="greeting font-bold text-4xl">
+<<<<<<< HEAD
             <span>Hello, </span> <span>{UserDetails?.name}!</span>
           </div>
 
           <div className="programs text-md font-semibold font-xl mt-1 text-[#704ca4]">
             <span>Program - (B.Tech-{UserDetails?.course} 2025)</span>
+=======
+            <span>Hello, </span>{user.userName}! <span></span>
+          </div>
+
+          <div className="programs text-md font-semibold font-xl mt-1 text-[#704ca4]">
+            <span>Program - <span>{user.programName}</span><span> 2025</span></span>
+>>>>>>> 776a081ae41fec81e92f756224cd5e2d1eb5d5be
           </div>
 
           <div className="tagline mt-7 text-md font-semibold text-gray-500">

@@ -29,10 +29,7 @@ const routes = (isAuthenticated, currentUser, login) => [
         path: "/assignments",
         element: <Assignments />,
       },
-      {
-        path: "/courses",
-        element: <Courses />,
-      },
+      
       {
         path: "/attendance",
         element: <Attendance />,
@@ -58,9 +55,13 @@ const routes = (isAuthenticated, currentUser, login) => [
         element: <SideEnroll />,
       },
       {
-        path: "/enroll",
+        path: "/enroll/:courseId",
         element: <ForEnroll />,
       },
+      {
+        path:"/courses/:id",
+        element: <Courses/>
+      }
     ],
   },
 

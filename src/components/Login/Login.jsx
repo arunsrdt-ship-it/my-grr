@@ -13,14 +13,9 @@ import GROU10 from "../../assets/login/Section Text.png";
 import GROU11 from "../../assets/login/Group (4).png";
 import GROU12 from "../../assets/login/Group (5).png";
 import users from "../../data/user";
-import "../../components/styles/Login.css";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { loginUser } from "../../features/auth/authThunk";
+import "../../components/styles/Login.css"
 
-const Login = () => {
-  const { user, error, loading } = useSelector((state) => state.auth);
-
+const Login = ({ login }) => {
   const [userId, setUserId] = useState("");
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
@@ -28,13 +23,15 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(loginUser({ userId, pass }))
-      .unwrap()
-      .then(() => navigate("/home"))
-      .catch((err) => {
-        console.error("Login error:", err);
-        alert(err?.message || err || "Invalid credentials");
-      });
+
+    const user = users.find((u) => u.email === userId && u.password === pass);
+
+    if (user) {
+      login(user);
+      navigate("/home");
+    } else {
+      alert("Invalid credentials!");
+    }
   };
 
   return (
@@ -76,8 +73,8 @@ const Login = () => {
                 type="text"
                 className="w-full border p-2 rounded-md border-gray-300"
                 placeholder="323432534545"
-                value={userId}
-                onChange={(e) => setUserId(e.target.value)}
+                value={userDetailsId}
+                onChange={(e) => setUserDetailById(e.target.value)}
               />
             </div>
             <div>
@@ -86,8 +83,8 @@ const Login = () => {
                 type="password"
                 className="w-full border p-2 rounded-md border-gray-300"
                 placeholder="Password"
-                value={pass}
-                onChange={(e) => setPass(e.target.value)}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="check-box flex mt-1 gap-5 text-sm">
