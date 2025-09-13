@@ -26,20 +26,35 @@ const Description = () => {
     <div className="description w-[70vw]">
       <div className="description-elements">
         
-    
+        {/* Course Title */}
         <h2 className="text-2xl font-bold mb-4">{detail.title}</h2>
 
-        <div className="heading-1">
-          <h3 className="font-semibold text-xl">Course Description</h3>
+        {/* Course Description */}
+        <div className="heading-1 mb-6">
+          <h3 className="font-semibold text-xl mb-2">Course Description</h3>
           <p>{detail.description || "No description available for this course."}</p>
         </div>
 
-      
+        {/* Example: Showing other course details with icons */}
+        <div className="flex gap-6 mt-4">
+          <div className="flex items-center gap-2">
+            <img src={AWARD} alt="Award" className="w-6 h-6" />
+            <span>{detail.award || "No award info"}</span>
+          </div>
 
-      
+          <div className="flex items-center gap-2">
+            <img src={GRAD} alt="Graduation" className="w-6 h-6" />
+            <span>{detail.level || "No level info"}</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <img src={PLAY} alt="Duration" className="w-6 h-6" />
+            <span>{detail.duration || "No duration info"}</span>
+          </div>
         </div>
+
       </div>
-    
+    </div>
   );
 };
 

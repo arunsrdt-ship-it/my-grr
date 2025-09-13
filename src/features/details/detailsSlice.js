@@ -12,9 +12,6 @@ const detailSlice = createSlice({
     name:"detail",
     initialState,
     reducers:{
-        deleteDetail: (state) => {
-            state.detail = null;
-        }
     },
 
     extraReducers : (builder) => {
@@ -37,5 +34,4 @@ const detailSlice = createSlice({
 });
 
 
-export const {deleteDetail} = detailSlice.actions;
 export default detailSlice.reducer;
